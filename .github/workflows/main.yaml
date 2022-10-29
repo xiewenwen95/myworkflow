@@ -7,16 +7,15 @@ on:
 #jobs in the workflow
 jobs:
 #job name
-   my-first-workflow:
+  my-first-workflow:
     #os that this workflow will be running on
-     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-
-     # list of steps to perform task
-     steps:
-     - name: echo the date
+    # list of steps to perform task
+    steps: 
+    - name: echo the date
       run: echo "the current time and date in Githun is $(date)"
-     - name:echo information about the text
+    - name: echo information about the text
       run: echo "head_ref - ${{github.head_ref}}, owner - ${{github.respository_owner }}"
-     - name: List runner name
+    - name: List runner name
       run: echo "runner os - {{ runner.os }}"
